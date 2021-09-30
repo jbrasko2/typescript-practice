@@ -22,3 +22,7 @@ employee = [
   [2, 'Jack'],
   [3, 'Jill']
 ]
+
+// Union - more than one type
+let pid: string | number = 22
+pid = 'twenty-two'
