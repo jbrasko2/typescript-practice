@@ -60,3 +60,10 @@ const addNum = (x, y) => {
 function log(message) {
     console.log(message);
 }
+const p1 = 1;
+// question mark means optional
+// readonly means property cannot be reassigned
+const user2 = {
+    id: 1,
+    name: 'Jordan',
+};

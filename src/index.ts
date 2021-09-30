@@ -73,11 +73,30 @@ let customerId = cid as number
 
 // Functions
 // implicit arguments and return
-const addNum = (x: number, y:number): number => {
+const addNum = (x: number, y: number): number => {
   return x + y
 }
 
 // void if no return value
 function log(message: string | number): void {
   console.log(message)
+}
+
+// Interfaces
+// Type can be used with primitives or unions, Interfaces cannot
+type Point = number | string
+const p1: Point = 1
+
+interface UserInterface {
+  readonly id: number
+  name: string,
+  age?: number
+}
+
+// question mark means optional
+// readonly means property cannot be reassigned
+
+const user2: UserInterface = {
+  id: 1,
+  name: 'Jordan',
 }
