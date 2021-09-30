@@ -6,3 +6,5 @@ let x = 'Hello';
 let age;
 x = true;
 age = 30;
+let ids = [1, 2, 3, 4];
+let arr = [1, true, 'Hello'];
