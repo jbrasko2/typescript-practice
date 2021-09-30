@@ -89,7 +89,7 @@ const p1: Point = 1
 
 interface UserInterface {
   readonly id: number
-  name: string,
+  name: string
   age?: number
 }
 
@@ -100,3 +100,11 @@ const user2: UserInterface = {
   id: 1,
   name: 'Jordan',
 }
+
+// Interface within a function
+interface MathFunc {
+  (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y
+const sub: MathFunc = (x: number, y: number): number => x - y

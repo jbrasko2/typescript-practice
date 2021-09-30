@@ -67,3 +67,5 @@ const user2 = {
     id: 1,
     name: 'Jordan',
 };
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
