@@ -69,3 +69,18 @@ const user2 = {
 };
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+// public: default
+// private: property can only be accessed from the class
+// protected: property can only be accessed from the class or extensions/subclasses
+// can only be used in classes without an interface (interface define public contracts)
+const jordan = new Person(1, 'Jordan Brasko');
+console.log(jordan.register());

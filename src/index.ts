@@ -108,3 +108,33 @@ interface MathFunc {
 
 const add: MathFunc = (x: number, y: number): number => x + y
 const sub: MathFunc = (x: number, y: number): number => x - y
+
+// Classes
+interface PersonInterface {
+  id: number
+  name: string
+  age?: number
+  register(): string
+}
+
+class Person implements PersonInterface {
+  id: number
+  name: string
+
+  constructor(id: number, name: string) {
+    this.id = id
+    this.name = name
+  }
+
+  register() {
+    return `${this.name} is now registered`
+  }
+}
+
+// public: default
+// private: property can only be accessed from the class
+// protected: property can only be accessed from the class or extensions/subclasses
+// can only be used in classes without an interface (interface define public contracts)
+
+const jordan = new Person(1, 'Jordan Brasko')
+console.log(jordan.register())
