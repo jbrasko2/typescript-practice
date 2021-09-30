@@ -51,4 +51,10 @@ const user1 = {
 let cid = 1;
 // let customerId = <number>cid
 let customerId = cid;
-customerId = true;
+// Functions
+// implicit arguments and return
+const addNum = (x, y) => {
+    return x + y;
+};
+console.log(addNum(1, 2));
+console.log(addNum(1, 'test'));

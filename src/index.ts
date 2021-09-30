@@ -71,4 +71,11 @@ let cid: any = 1
 // let customerId = <number>cid
 let customerId = cid as number
 
-customerId = true
+// Functions
+// implicit arguments and return
+const addNum = (x: number, y:number): number => {
+  return x + y
+}
+
+console.log(addNum(1, 2))
+console.log(addNum(1, 'test'))
