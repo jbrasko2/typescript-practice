@@ -84,3 +84,12 @@ class Person {
 // can only be used in classes without an interface (interface define public contracts)
 const jordan = new Person(1, 'Jordan Brasko');
 console.log(jordan.register());
+// Sublasses
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Jimbo Jenkins', 'Developer');
+console.log(emp.register());
