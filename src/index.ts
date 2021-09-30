@@ -54,6 +54,8 @@ const user: {
   name: 'Jordan',
 }
 
+// or
+
 type User = {
   id: number
   name: string
