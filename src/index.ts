@@ -77,5 +77,7 @@ const addNum = (x: number, y:number): number => {
   return x + y
 }
 
-console.log(addNum(1, 2))
-console.log(addNum(1, 'test'))
+// void if no return value
+function log(message: string | number): void {
+  console.log(message)
+}

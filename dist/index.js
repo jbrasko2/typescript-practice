@@ -56,5 +56,7 @@ let customerId = cid;
 const addNum = (x, y) => {
     return x + y;
 };
-console.log(addNum(1, 2));
-console.log(addNum(1, 'test'));
+// void if no return value
+function log(message) {
+    console.log(message);
+}
