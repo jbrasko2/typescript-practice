@@ -11,3 +11,10 @@ let ids = [1, 2, 3, 4];
 let arr = [1, true, 'Hello'];
 // Tuple
 let person = [1, 'Jordan', true];
+// Tuple Array
+let employee;
+employee = [
+    [1, 'Jordan'],
+    [2, 'Jack'],
+    [3, 'Jill']
+];
