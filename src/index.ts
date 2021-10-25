@@ -1,4 +1,5 @@
 let id: number = 5;
+// number type encompasses integers and floats
 let company: string = 'Jordan';
 let isPublished: boolean = true;
 let x: any = 'Hello';
