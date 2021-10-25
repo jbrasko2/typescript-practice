@@ -1,30 +1,30 @@
-let id: number = 5
-let company: string = 'Jordan'
-let isPublished: boolean = true
-let x: any = 'Hello'
-let age: number
+let id: number = 5;
+let company: string = 'Jordan';
+let isPublished: boolean = true;
+let x: any = 'Hello';
+let age: number;
 
-x = true
-age = 30
+x = true;
+age = 30;
 
 // Array
-let ids: number[] = [1, 2, 3, 4]
-let arr: any[] = [1, true, 'Hello']
+let ids: number[] = [1, 2, 3, 4];
+let arr: any[] = [1, true, 'Hello'];
 
 // Tuple
-let person: [number, string, boolean] = [1, 'Jordan', true]
+let person: [number, string, boolean] = [1, 'Jordan', true];
 // Tuple Array
-let employee: [number, string][]
+let employee: [number, string][];
 
 employee = [
   [1, 'Jordan'],
   [2, 'Jack'],
   [3, 'Jill'],
-]
+];
 
 // Union - more than one type
-let pid: string | number = 22
-pid = 'twenty-two'
+let pid: string | number = 22;
+pid = 'twenty-two';
 
 // Enum - named constants, numeric or string
 
@@ -42,55 +42,55 @@ enum Direction2 {
   Right = 'Right',
 }
 
-console.log(Direction1.Up)
-console.log(Direction2.Up)
+console.log(Direction1.Up);
+console.log(Direction2.Up);
 
 // Objects
 const user: {
-  id: number
-  name: string
+  id: number;
+  name: string;
 } = {
   id: 1,
   name: 'Jordan',
-}
+};
 
 // or
 
 type User = {
-  id: number
-  name: string
-}
+  id: number;
+  name: string;
+};
 
 const user1: User = {
   id: 1,
   name: 'Jordan',
-}
+};
 
 // Type Assertion
-let cid: any = 1
+let cid: any = 1;
 // let customerId = <number>cid
-let customerId = cid as number
+let customerId = cid as number;
 
 // Functions
 // implicit arguments and return
 const addNum = (x: number, y: number): number => {
-  return x + y
-}
+  return x + y;
+};
 
 // void if no return value
 function log(message: string | number): void {
-  console.log(message)
+  console.log(message);
 }
 
 // Interfaces
 // Type can be used with primitives or unions, Interfaces cannot
-type Point = number | string
-const p1: Point = 1
+type Point = number | string;
+const p1: Point = 1;
 
 interface UserInterface {
-  readonly id: number
-  name: string
-  age?: number
+  readonly id: number;
+  name: string;
+  age?: number;
 }
 
 // question mark means optional
@@ -99,35 +99,35 @@ interface UserInterface {
 const user2: UserInterface = {
   id: 1,
   name: 'Jordan',
-}
+};
 
 // Interface within a function
 interface MathFunc {
-  (x: number, y: number): number
+  (x: number, y: number): number;
 }
 
-const add: MathFunc = (x: number, y: number): number => x + y
-const sub: MathFunc = (x: number, y: number): number => x - y
+const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
 
 // Classes
 interface PersonInterface {
-  id: number
-  name: string
-  age?: number
-  register(): string
+  id: number;
+  name: string;
+  age?: number;
+  register(): string;
 }
 
 class Person implements PersonInterface {
-  id: number
-  name: string
+  id: number;
+  name: string;
 
   constructor(id: number, name: string) {
-    this.id = id
-    this.name = name
+    this.id = id;
+    this.name = name;
   }
 
   register() {
-    return `${this.name} is now registered`
+    return `${this.name} is now registered`;
   }
 }
 
@@ -136,30 +136,30 @@ class Person implements PersonInterface {
 // protected: property can only be accessed from the class or extensions/subclasses
 // can only be used in classes without an interface (interface define public contracts)
 
-const jordan = new Person(1, 'Jordan Brasko')
-console.log(jordan.register())
+const jordan = new Person(1, 'Jordan Brasko');
+console.log(jordan.register());
 
 // Sublasses
 class Employee extends Person {
-  position: string
+  position: string;
 
   constructor(id: number, name: string, position: string) {
-    super(id, name)
-    this.position = position
+    super(id, name);
+    this.position = position;
   }
 }
 
-const emp = new Employee(3, 'Jimbo Jenkins', 'Developer')
+const emp = new Employee(3, 'Jimbo Jenkins', 'Developer');
 
-console.log(emp.register())
+console.log(emp.register());
 
 // Generics (used to build reusable components)
 function getArray<T>(items: T[]): T[] {
-  return new Array().concat(items)
+  return new Array().concat(items);
 }
 
-let numArray = getArray<number>([1, 2, 3, 4])
-let strArray = getArray<string>(['Jordan, Jack, Jill'])
+let numArray = getArray<number>([1, 2, 3, 4]);
+let strArray = getArray<string>(['Jordan, Jack, Jill']);
 
-numArray.push('hello')
-strArray.push(1)
+numArray.push('hello');
+strArray.push(1);
